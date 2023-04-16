@@ -1,16 +1,19 @@
-import {ScoreList} from "./ScoreList";
+import {LinkedList} from "./LinkedList";
 
-let listScoreOfStudent = new ScoreList();
-// listScoreOfStudent.insertFirst('Hieu', 5);
-listScoreOfStudent.insertLast('Toan', 9);
-listScoreOfStudent.insertFirst('DucAnh', 10);
-listScoreOfStudent.insertLast('Hieu', 6);
-listScoreOfStudent.insertLast('Hieu1', 10);
-listScoreOfStudent.insertLast('Hieu2', 2);
-console.table(listScoreOfStudent.showList());
-console.table(listScoreOfStudent.totalStudentsFail());
-console.table(listScoreOfStudent.listScore());
-console.table(listScoreOfStudent.listStudentMaxScore());
-console.log(listScoreOfStudent.findByName('aaa'));
-console.log(listScoreOfStudent.findByName('Hieu'));
-
+let studentList = new LinkedList();
+studentList.insertFirst('HieuC', 5);
+studentList.insertLast('HieuT', 10);
+studentList.insertLast('Toan', 8);
+studentList.insertLast('Tu', 10);
+studentList.insertFirst('Viet', 10);
+studentList.insertLast('Momo', 3);
+studentList.insertFirst('Mimi', 5);
+studentList.insertFirst('Meme', 2);
+studentList.insertFirst('Meme', 3);
+studentList.insertFirst('Meme', 4);
+studentList.insertFirst('Meme', 5);
+console.table(studentList.showList());
+console.table(studentList.getScoreList());
+console.log(studentList.totalStudentFail());
+console.table(studentList.listStudentMaxScore());
+console.table(studentList.findByName('Meme'));
